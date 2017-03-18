@@ -1,0 +1,75 @@
+http://go-database-sql.org/accessing.html (como conectar no mysql)
+
+http://www.programering.com/a/MzM3UTMwATk.html (banco de dados)
+
+https://astaxie.gitbooks.io/ (tudo sobre go)
+
+Framework: beego.me
+
+github.com/avelino/awesome-go
+golangbr.org
+
+http://www.golang-book.com/books/intro
+
+Video aula web go
+https://www.youtube.com/watch?v=_b-9kcq-xmA&list=PLY2ogieTReHz8T8mf5RfXxHOPNjhUpmyv
+
+Install sublime for go
+http://www.webseekerz.com/blog/golang-editor-sublime-text-3.html
+https://www.youtube.com/watch?v=IjXgWmSR9Ys
+
+SUBLIME 3 (Ctrl + " em seguida cole esta linha abaixo e de enter)
+import urllib.request,os,hashlib; h = 'df21e130d211cfc94d9b0905775a7c0f' + '1e3d39e33b79698005270310898eea76'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) 
+
+COMANDOS GO
+
+go env
+set GOARCH=amd64
+set GOBIN=c:\Go\Projects\code01\bin
+set GOEXE=.exe
+set GOHOSTARCH=amd64
+set GOHOSTOS=windows
+set GOOS=windows
+set GOPATH=c:\Go\Projects\code01
+set GORACE=
+set GOROOT=C:\Go
+set GOTOOLDIR=C:\Go\pkg\tool\windows_amd64
+set GCCGO=gccgo
+set CC=gcc
+set GOGCCFLAGS=-m64 -mthreads -fmessage-length=0
+set CXX=g++
+set CGO_ENABLED=1
+set PKG_CONFIG=pkg-config
+set CGO_CFLAGS=-g -O2
+set CGO_CPPFLAGS=
+set CGO_CXXFLAGS=-g -O2
+set CGO_FFLAGS=-g -O2
+set CGO_LDFLAGS=-g -O2
+
+DADOS para conectar no banco do Ze azure
+pwbt.database.windows.net
+user: admin-jose
+pass: 123abc!@#
+
+mysql
+br-cdbr-azure-south-b.cloudapp.net
+user: bbb61615b8ebf9
+pass: 241ca141
+
+funcionou
+go get github.com/denisenkom/go-mssqldb
+go get github.com/gorilla/mux
+
+criar as pastas dos projetos a partir do diretorio PATH
+
+Help GIT
+git clone [endereço] shift + insert
+git add .
+git commit -m "texto"
+git push
+git pull (puxa alterações do diretorio clonado)
+git mergetool (edita arquivo caso conflito
+git fetch (sincroniza as branch com o servidor)
+git checkout [nome da branch]
+
+compare (da onde vem)
