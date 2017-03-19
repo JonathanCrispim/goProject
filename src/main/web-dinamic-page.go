@@ -14,6 +14,13 @@ func main() {
 	serveWeb()
 }
 
+// struct to pass into the template
+type defaultContext struct{
+	Title string
+	ErrorMsg string
+	SuccessMsg string
+}
+
 var themeName  = getThemeName()
 var staticPages = populateStaticPages()
 
@@ -45,7 +52,13 @@ func serveContent(w http.ResponseWriter, r *http.Request) {
 		w.WriteHeader(404)
 	}
 
-	staticPage.Execute(w, nil)
+	//Values to pass into the template
+	context := defaultContext{}
+	context.Title = page_alias
+	context.ErrorMsg = ""
+	context.SuccessMsg = ""
+
+	staticPage.Execute(w, context)
 }
 
 func getThemeName() string {
@@ -60,7 +73,15 @@ func populateStaticPages() *template.Template {
 	templateFolder, _:= os.Open(basePath)
 	defer templateFolder.Close()
 	templatePathsRaw, _ := templateFolder.Readdir(-1)
+	for _, pathinfo := range templatePathsRaw {
+		log.Println(pathinfo.Name())
+		*templatePaths = append(*templatePaths, basePath + "/" + pathinfo.Name())
+	}
 
+	basePath = "themes/" + themeName
+	templateFolder, _= os.Open(basePath)
+	defer templateFolder.Close()
+	templatePathsRaw, _ = templateFolder.Readdir(-1)
 	for _, pathinfo := range templatePathsRaw {
 		log.Println(pathinfo.Name())
 		*templatePaths = append(*templatePaths, basePath + "/" + pathinfo.Name())
@@ -79,7 +100,7 @@ func serveResource(w http.ResponseWriter, req *http.Request){
 		contentType = "text/css; charset=utf-8"
 	}else if strings.HasSuffix(path, ".png"){
 		contentType = "image/png; charset=utf-8"
-	}else if strings.HasSuffix(path, ".jpg"){
+	}else if strings.HasSuffix(path, ".	jpg"){
 		contentType = "image/jpg; charset=utf-8"
 	}else if strings.HasSuffix(path, ".js"){
 		contentType = "application/javascript; charset=utf-8"
