@@ -49,12 +49,12 @@ set CGO_LDFLAGS=-g -O2
 DADOS para conectar no banco do Ze azure
 pwbt.database.windows.net
 user: admin-jose
-pass: 123abc!@#
+pass: #123abc!@
 
 mysql
 br-cdbr-azure-south-b.cloudapp.net
 user: bbb61615b8ebf9
-pass: 241ca141
+pass: 1241ca14
 
 funcionou
 go get github.com/denisenkom/go-mssqldb
@@ -63,13 +63,16 @@ go get github.com/gorilla/mux
 criar as pastas dos projetos a partir do diretorio PATH
 
 Help GIT
-git clone [endereço] shift + insert
+git clone [endereÃ§o] shift + insert
 git add .
 git commit -m "texto"
 git push
-git pull (puxa alterações do diretorio clonado)
+git pull (puxa alteraÃ§Ãµes do diretorio clonado)
 git mergetool (edita arquivo caso conflito
 git fetch (sincroniza as branch com o servidor)
 git checkout [nome da branch]
-
 compare (da onde vem)
+
+git config --global user.name "Joseph"
+git config --global user
+git init (inicia o diretorio)
