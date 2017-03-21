@@ -75,4 +75,12 @@ compare (da onde vem)
 
 git config --global user.name "Joseph"
 git config --global user
+git config user.name
+
 git init (inicia o diretorio)
+git log --decorate
+git log shortlog (log reduzido)
+
+git diff (mosttra o que alterou)
+git checkout arquivo (ctrl+z)
+git reset HEAD (volta o commit)
