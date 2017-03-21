@@ -80,7 +80,10 @@ git config user.name
 git init (inicia o diretorio)
 git log --decorate
 git log shortlog (log reduzido)
+git log --graph
 
 git diff (mosttra o que alterou)
 git checkout arquivo (ctrl+z)
 git reset HEAD (volta o commit)
+git chechout -b nome (cria branch)
+git checkout -D nome (delete branch)
