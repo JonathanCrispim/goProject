@@ -1,3 +1,5 @@
+https://www.youtube.com/watch?v=fQVYSeMmdIc (golang web formulario de login)
+
 http://go-database-sql.org/accessing.html (como conectar no mysql)
 
 http://www.programering.com/a/MzM3UTMwATk.html (banco de dados)
