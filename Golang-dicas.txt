@@ -65,6 +65,7 @@ pass: 1241ca14
 funcionou
 go get github.com/denisenkom/go-mssqldb
 go get github.com/gorilla/mux
+go get github.com/derekparker/delve/cmd/dlv (usado com VS code)
 
 criar as pastas dos projetos a partir do diretorio PATH
 
