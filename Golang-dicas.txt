@@ -12,6 +12,8 @@ https://astaxie.gitbooks.io/ (tudo sobre go)
 
 https://mschoebel.info/2014/03/09/snippet-golang-webapp-login-logout/ (autenticando login)
 
+https://www.thepolyglotdeveloper.com/2016/07/create-a-simple-restful-api-with-golang/ (rest example)
+
 Framework: beego.me
 
 github.com/avelino/awesome-go
